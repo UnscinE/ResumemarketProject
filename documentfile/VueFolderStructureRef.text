@@ -1,0 +1,43 @@
+src/
+├── assets/                 # Global media, static fonts, and base styling
+├── components/             # Dumb, highly reusable app-wide UI blocks (Base/App prefix)
+│   ├── BaseButton.vue
+│   └── BaseModal.vue
+├── composables/            # Global custom hooks (e.g., useTheme, useAuthToken)
+├── layouts/                # Wrapper structures (e.g., DefaultLayout, DashboardLayout)
+├── features/               # THE CORE: Domain-driven modules
+│   ├── auth/               # Feature: Authentication
+│   │   ├── components/     # Internal feature components
+│   │   │   ├── LoginForm.vue
+│   │   │   └── RegisterForm.vue
+│   │   ├── composables/    # Business logic hooks only used here
+│   │   │   └── useAuthSubmit.ts
+│   │   ├── store.ts        # Pinia store for this specific context
+│   │   ├── routes.ts       # Route chunk for auth pages
+│   │   └── api.ts          # Network request wrappers for endpoints
+│   │
+│   ├── products/           # Feature: Catalog & Inventory
+│   │   ├── components/     # Internal domain components
+│   │   │   ├── ProductCard.vue
+│   │   │   └── ProductFilter.vue
+│   │   ├── composables/    
+│   │   ├── store.ts        
+│   │   ├── routes.ts       
+│   │   └── api.ts          
+│   │
+│   └── checkout/           # Feature: Cart & Payment processing
+│
+├── pages/                  # Route-level views mapping directly to screens
+│   ├── auth/
+│   │   ├── LoginPage.vue   # Imports and orchestrates features/auth components
+│   │   └── RegisterPage.vue
+│   ├── ProductCatalogPage.vue
+│   └── HomePage.vue
+│
+├── router/                 # Root router instance stitching feature routes together
+│   └── index.ts
+├── store/                  # Global Pinia configuration instance
+│   └── index.ts
+├── utils/                  # Pure helper functions (e.g., formatCurrency, formatDate)
+├── App.vue                 # Base root entry point 
+└── main.ts                 # App initiator script
