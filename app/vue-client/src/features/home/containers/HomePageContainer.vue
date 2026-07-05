@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, reactive, computed } from 'vue'
+import HomePageNav from "@/components/homepage/HomePageNav.vue"
 // นำเข้าไอคอนจาก Lucide Vue
 import {
-  Bell as BellIcon,
   SlidersHorizontal as SlidersHorizontalIcon,
   Search as SearchIcon,
   Heart as HeartIcon,
@@ -110,32 +110,11 @@ const contactCandidate = (id: any) => {
 <template>
   <div id="homepage" class="min-h-screen bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div
-            class="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg">
-            T</div>
-          <span class="font-bold text-xl tracking-tight text-slate-900">Talent<span
-              class="text-blue-600">Hub</span></span>
-        </div>
-        <div class="flex items-center gap-4">
-          <button
-            class="relative p-2 text-slate-500 hover:text-slate-700 rounded-full hover:bg-slate-100 transition cursor-pointer">
-            <BellIcon class="w-5 h-5" />
-            <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
-          </button>
-          <div class="flex items-center gap-3 border-l border-slate-200 pl-4">
-            <div
-              class="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center font-semibold text-sm text-slate-700">
-              HR</div>
-            <span class="text-sm font-medium text-slate-700 hidden md:inline">Tanawat (Recruiter)</span>
-          </div>
-        </div>
-      </div>
-    </nav>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <HomePageNav />
+
+
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
       <div class="mb-8">
         <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Discover Talents</h1>
@@ -233,7 +212,7 @@ const contactCandidate = (id: any) => {
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 
             <div v-for="candidate in filteredCandidates" :key="candidate.id"
               class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:border-blue-300 hover:shadow-md transition flex flex-col justify-between group">

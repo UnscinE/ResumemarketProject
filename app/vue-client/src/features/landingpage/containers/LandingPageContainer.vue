@@ -1,43 +1,13 @@
 <script setup lang="ts">
-
+import LandingPageFooter from '../components/LandingPageFooter.vue'
+import LandingPageNavbar from '../components/LandingPageNavbar.vue';
 </script>
 
 <template>
   <div id="landingpage"
     class="flex flex-col items-center min-h-screen bg-slate-50/50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
-    <nav
-      class="fixed top-0 w-full bg-white/70 backdrop-blur-md border-b border-slate-200/80 z-50 transition-all duration-300">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between h-20">
-          <div
-            class="flex items-center gap-2 font-black text-2xl tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            ResumeMarket
-          </div>
 
-          <div class="hidden md:flex gap-8 font-medium text-slate-600">
-            <a href="#features"
-              class="transition-colors duration-200 hover:text-blue-600 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full">Features</a>
-            <a href="#candidate"
-              class="transition-colors duration-200 hover:text-blue-600 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full">Candidates</a>
-            <a href="#recruiter"
-              class="transition-colors duration-200 hover:text-blue-600 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full">Recruiters</a>
-            <a href="/about"
-              class="transition-colors duration-200 hover:text-blue-600 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all hover:after:w-full">About</a>
-          </div>
-
-          <div class="flex gap-4 items-center">
-            <button class="px-5 py-2.5 font-medium text-slate-600 hover:text-blue-600 transition-colors">
-              Login
-            </button>
-            <button
-              class="px-5 py-2.5 bg-slate-900 text-white font-medium rounded-xl hover:bg-slate-800 active:scale-[0.98] transition-all shadow-sm shadow-slate-900/10">
-              Sign Up
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-
+    <LandingPageNavbar />
     <section class="relative w-full pt-40 pb-28 bg-linear-to-br from-blue-50 via-indigo-50/30 to-white overflow-hidden">
       <div class="absolute top-20 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -z-10"></div>
       <div class="absolute bottom-0 left-10 w-80 h-80 bg-indigo-400/10 rounded-full blur-3xl -z-10"></div>
@@ -68,7 +38,7 @@
                 class="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-600/20 hover:bg-blue-700 active:scale-[0.98] transition-all">
                 Explore Candidates
               </button>
-              <button
+              <button @click="$router.push('/candidate/profile')"
                 class="px-8 py-4 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 rounded-xl font-semibold active:scale-[0.98] transition-all">
                 Create Your Profile
               </button>
@@ -178,7 +148,8 @@
               class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center font-bold text-xl group-hover:bg-purple-600 group-hover:text-white transition-colors">
               📹</div>
             <h3 class="font-bold text-xl text-slate-900 mt-6">Video Intro</h3>
-            <p class="text-slate-500 text-sm mt-2 leading-relaxed">Introduce yourself directly and let your soft skills
+            <p class="text-slate-500 text-sm mt-2 leading-relaxed">Introduce yourself directly and let your soft
+              skills
               shine.</p>
           </div>
           <div
@@ -272,20 +243,7 @@
       </div>
     </section>
 
-    <footer class="w-full bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
-      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-center md:text-left">
-          <h3 class="text-2xl font-black text-white tracking-tight">
-            ResumeMarket
-          </h3>
-          <p class="text-slate-500 mt-2 text-sm">
-            Professional Profile & Resume Discovery Platform
-          </p>
-        </div>
-        <div class="text-sm text-slate-600">
-          &copy; 2026 ResumeMarket. All rights reserved.
-        </div>
-      </div>
-    </footer>
+    <LandingPageFooter />
+
   </div>
 </template>

@@ -4,6 +4,6 @@ import LandingPageContainer from '../features/landingpage/containers/LandingPage
 
 <template>
   <main>
-    <LandingPageContainer />ddddddd
+    <LandingPageContainer />
   </main>
 </template>

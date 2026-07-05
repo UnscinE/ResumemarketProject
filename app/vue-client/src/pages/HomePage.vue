@@ -5,7 +5,5 @@ import HomePageContainer from '../features/home/containers/HomePageContainer.vue
 <template>
   <main>
     <HomePageContainer />
-    dsadad
-    dasddddddawdawd
   </main>
 </template>

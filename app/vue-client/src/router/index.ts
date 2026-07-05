@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '../pages/LandingPage.vue'
 import HomePage from '../pages/HomePage.vue'
+import CandidateProfileViewer from '../pages/CandidateProfileViewerPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/home',
       name: 'homepage',
       component: HomePage,
+    },
+    {
+      path: '/candidate/profile',
+      name: 'candidate-profile',
+      component: CandidateProfileViewer,
     }
   ],
 })
