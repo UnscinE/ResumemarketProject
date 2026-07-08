@@ -299,6 +299,9 @@ importers:
 
   app/vue-client:
     dependencies:
+      '@lucide/vue':
+        specifier: ^1.23.0
+        version: 1.23.0(vue@3.5.35(typescript@6.0.3))
       '@vue/composition-api':
         specifier: ^1.7.2
         version: 1.7.2(vue@3.5.35(typescript@6.0.3))
@@ -1468,6 +1471,11 @@ packages:
     resolution: {integrity: sha512-JF1BmLCm9kGEVZgYmJq43zeQVdHVgAJnTi/NURWEsy6L1ZrrlSmdltS+D17QN4LODwf+1LMXAA9auIZVXtWwzw==}
     cpu: [x64]
     os: [win32]
+
+  '@lucide/vue@1.23.0':
+    resolution: {integrity: sha512-9SIYeY5K+R1iv8F8JUKMGSL7Pck/86BJ8djtZz/lnYsoHtKFUj1H2z6+PvKnC/8blZ8tqTDeDXAoTKobuX80hg==}
+    peerDependencies:
+      vue: '>=3.0.1'
 
   '@modelcontextprotocol/sdk@1.29.0':
     resolution: {integrity: sha512-zo37mZA9hJWpULgkRpowewez1y6ML5GsXJPY8FI0tBBCd77HEvza4jDqRKOXgHNn867PVGCyTdzqpz0izu5ZjQ==}
@@ -5969,6 +5977,10 @@ snapshots:
 
   '@lmdb/lmdb-win32-x64@3.5.4':
     optional: true
+
+  '@lucide/vue@1.23.0(vue@3.5.35(typescript@6.0.3))':
+    dependencies:
+      vue: 3.5.35(typescript@6.0.3)
 
   '@modelcontextprotocol/sdk@1.29.0(zod@4.4.2)':
     dependencies:

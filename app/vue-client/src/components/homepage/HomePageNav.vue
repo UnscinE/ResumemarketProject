@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import TaladResume from '../icons/TaladResume.vue';
 const route = useRoute()
 </script>
 
@@ -9,7 +10,9 @@ const route = useRoute()
     <div class=" mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div
         class="flex items-center gap-2 font-black text-2xl tracking-tight bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-        ResumeMarket
+
+        <TaladResume />
+
       </div>
 
       <div class="flex flex-row gap-4 justify-between items-center">

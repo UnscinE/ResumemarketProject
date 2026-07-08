@@ -1,6 +1,5 @@
-<script lang="ts">
-
-export default {}
+<script setup lang="ts">
+import TaladResume from '@/components/icons/TaladResume.vue';
 </script>
 
 
@@ -11,7 +10,9 @@ export default {}
       <div class="flex items-center justify-between h-20">
         <div
           class="flex items-center gap-2 font-black text-2xl tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-          ResumeMarket
+
+          <TaladResume />
+
         </div>
 
         <div class="hidden md:flex gap-8 font-medium text-slate-600">
